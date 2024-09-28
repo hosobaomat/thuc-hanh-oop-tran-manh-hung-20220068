@@ -20,6 +20,7 @@ public class bai62 {
         // nextFloat(), nextBoolean()
 
         System.out.println("Mrs./Ms. " + strName + ", " + iAge + " years old. "+ "Your height is " + dHeight + ".");
+        keyboard.close();
     }
 }
 

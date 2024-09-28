@@ -16,6 +16,7 @@ public class bai63 {
         }
         System.out.println();
     }
+    s.close();
 
 }
 }
