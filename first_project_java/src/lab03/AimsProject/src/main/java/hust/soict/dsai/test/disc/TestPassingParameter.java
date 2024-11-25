@@ -33,6 +33,11 @@ public class TestPassingParameter {
         dvds[0] = dvds[1];
         dvds[1] = tmp;
     }
+    public static void swap(DigitalVideoDisc o1, DigitalVideoDisc o2){
+        String tmp = o1.getTitle();
+        o1.setTitle(o2.getTitle());
+        o2.setTitle(tmp);
+    }
 
     public static void changeTitle(DigitalVideoDisc dvd, String title){
         String oldTitle = dvd.getTitle();
