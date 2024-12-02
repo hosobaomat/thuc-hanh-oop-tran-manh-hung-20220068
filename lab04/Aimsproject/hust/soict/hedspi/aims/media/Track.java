@@ -28,5 +28,18 @@ public class Track extends CompactDisc implements Playable {
 		this.length = length;
 	}
 	
-	
+//<<<<<<< topic/override-equals-method
+	public boolean equals(Object obj) {
+		if (obj instanceof Track) {
+			Track track = (Track) obj;
+			if (this.titleTrack.equals(track.titleTrack) && this.length == track.length) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
+
+	
+
+
