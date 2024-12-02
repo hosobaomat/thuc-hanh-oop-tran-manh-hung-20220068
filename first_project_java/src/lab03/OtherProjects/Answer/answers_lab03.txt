@@ -1,0 +1,48 @@
+Câu hỏi 2.1:
+src:
+   public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+      for (DigitalVideoDisc dvd : dvdList) {
+         this.addDigitalVideoDisc(dvd);
+      }
+   }
+
+   public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+      for (DigitalVideoDisc dvd : dvds) {
+         this.addDigitalVideoDisc(dvd);
+      }
+   }
+
+So sánh:
+    -Khi sử dụng mảng DigitalVideoDisc[] dvdList, cần phải tạo trước mảng DigitalVideoDisc[] trước khi truyền vào phương thức addDigitalVideoDisc
+    => cần làm thêm 1 bước trong quá trình dùng:
+        DigitalVideoDisc[] dvdList = {dvd1, dvd2, dvd3, dvd4};
+        cart.addDigitalVideoDisc(dvdList);
+    -Khi sử dụng đối số không giới hạn(Varargs): có thể truyền trực tiếp các đối tợng mà không cần bước tạo mảng
+    => Ngắn gọn hơn:
+        cart.addDigitalVideoDisc(dvd1, dvd2, dvd3, dvd4);
+
+-> Em thích dùng varargs hơn vì nó linh hoạt và tiện dụng trong quá trình dùng.
+
+Câu hỏi 3:
+-Sau khi gọi swap(jungleDVD, cinderellaDVD) thì title của 2 đối tượng jungleDVD và cinderellaDVD không thay đổi vì:
+    + Khi gọi phương thức, Java truyền một bản sao của tham chiếu (reference) đến các đối tượng. Bên trong phương thức swap, các thay đổi đối với tham số o1 và o2 chỉ áp dụng cho bản sao của tham chiếu, không ảnh hưởng đến tham chiếu gốc bên ngoài.
+    => Kết quả: title của 2 đối tượng không thay đổi vì bản thân cc đối tượng đó không thay đổi
+- Sau khi gọi changeTitle(jungleDVD, cinderellaDVD.getTitle()) title của JungleDVD thay đổi vì:
+    + Tham chiếu được truyền chỉ là bản sao, nhưng bản sao này vẫn trỏ đến đối tượng gốc. Khi gọi dvd.setTitle(title), phương thức này thay đổi thuộc tính của đối tượng mà tham chiếu dvd đang trỏ đến (jungleDVD).
+    + Tuy nhiên, khi dvd được gán cho một đối tượng mới (new DigitalVideoDisc(oldTitle)), điều này chỉ ảnh hưởng đến bản sao của tham chiếu trong phương thức, không ảnh hưởng đến tham chiếu jungleDVD bên ngoài.
+- Viết một phương thức khác có thể thực hiện hoán đổi : sử dụng một lớp bọc hoặc mảng để truyền tham chiếu chứa các đối tượng
+    public static void main(String[] args) {
+        ...
+        DigitalVideoDisc[] dvds = {jungleDVD, cinderellaDVD};
+        swap(dvds);
+        System.out.println("jungle dvd title: " + dvds[0].getTitle());
+        System.out.println("cinderella dvd title: " + dvds[1].getTitle());
+    }
+
+    public static void swap(DigitalVideoDisc[] dvds) {
+            DigitalVideoDisc tmp = dvds[0];
+            dvds[0] = dvds[1];
+            dvds[1] = tmp;
+        }
+
+
