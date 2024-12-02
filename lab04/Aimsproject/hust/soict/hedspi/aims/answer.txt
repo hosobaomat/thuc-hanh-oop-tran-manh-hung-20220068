@@ -1,0 +1,43 @@
+1. Lớp tổng hợp bao gồm: Book, CompactDisc, DigitalVideoDisc, Disc, MediaComparatorByTitle, MediaComparatorByCost
+2. Khi override phương thức equals() trong lớp Media, nếu đối tượng truyền vào (obj) không phải là một instance của Media, bạn cần xử lý như sau:
+* Vấn đề:
+    * Nếu đối tượng không thuộc kiểu Media, việc ép kiểu sẽ gây lỗi ClassCastException.
+    * Vì vậy, cần kiểm tra kiểu trước khi ép.
+* Cách xử lý:
+    * Dùng instanceof để kiểm tra nếu obj là instance của Media.
+    * Nếu không phải, trả về false để báo rằng hai đối tượng không bằng nhau.
+3
+*, Lớp nào nên implement giao diện Comparable?
+Lớp Media nên implement giao diện Comparable vì đây là lớp cơ sở cho tất cả các loại media (DVD, Book, CD) và chứa các thuộc tính chung (như title và cost) được sử dụng để so sánh.
+
+*, Cách implement phương thức compareTo()?
+
+@Override
+public int compareTo(Media other) {
+    int titleComparison = this.title.compareToIgnoreCase(other.title);
+    if (titleComparison != 0) {
+        return titleComparison; // Trả kết quả nếu tiêu đề khác nhau
+    }
+    return Float.compare(this.cost, other.cost);
+}
+Điều này đảm bảo các mục được sắp xếp theo tiêu đề trước, và nếu tiêu đề giống nhau thì so sánh theo giá.
+
+*, Có thể có hai quy tắc sắp xếp khi dùng giao diện Comparable không?
+Không, giao diện Comparable chỉ cho phép một quy tắc sắp xếp vì phương thức compareTo() chỉ có một. Để có nhiều quy tắc sắp xếp (ví dụ, theo tiêu đề rồi giá, hoặc theo giá rồi tiêu đề),cần sử dụng giao diện Comparator.
+
+*, Làm sao để DVDs có quy tắc sắp xếp riêng?
+
+@Override
+public int compareTo(Media other) {
+    if (other instanceof DigitalVideoDisc) {
+        DigitalVideoDisc dvd = (DigitalVideoDisc) other;
+        int titleComparison = this.title.compareToIgnoreCase(dvd.title);
+        if (titleComparison != 0) return titleComparison;
+
+        int lengthComparison = Integer.compare(dvd.length, this.length); // Chiều dài giảm dần
+        if (lengthComparison != 0) return lengthComparison;
+
+        return Float.compare(this.cost, dvd.cost); // So sánh giá
+    }
+    return super.compareTo(other); // Sử dụng quy tắc của Media cho các loại khác
+}
