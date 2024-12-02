@@ -40,4 +40,5 @@ public int compareTo(Media other) {
         return Float.compare(this.cost, dvd.cost); // So sánh giá
     }
     return super.compareTo(other); // Sử dụng quy tắc của Media cho các loại khác
+    
 }
