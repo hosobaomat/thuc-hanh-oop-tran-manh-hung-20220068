@@ -28,6 +28,7 @@ public class Track extends CompactDisc implements Playable {
 		this.length = length;
 	}
 	
+//<<<<<<< topic/override-equals-method
 	public boolean equals(Object obj) {
 		if (obj instanceof Track) {
 			Track track = (Track) obj;
@@ -38,3 +39,7 @@ public class Track extends CompactDisc implements Playable {
 		return false;
 	}
 }
+
+	
+
+
