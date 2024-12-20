@@ -1,0 +1,227 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "mainClass": "lab05.Aimsproject.hust.soict.hedspi.aims.screen.CartScreen",
+            "projectName": "Java_ded981d0",
+            "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Painter",
+            "request": "launch",
+            "mainClass": "lab05.GUIProject.hust.soict.hedspi.javafx.Painter",
+            "projectName": "Java_ded981d0",
+            "vmArgs": "--module-path \"C:/Users/84859/Downloads/openjfx-23.0.1_windows-x64_bin-sdk/javafx-sdk-23.0.1/lib\" --add-modules javafx.controls,javafx.fxml",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "main",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.main",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.AimsProject.src.main.java.hust.soict.dsai.aims.Aims",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "CartTest",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.AimsProject.src.main.java.hust.soict.dsai.test.cart.CartTest",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "TestPassingParameter",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.AimsProject.src.main.java.hust.soict.dsai.test.disc.TestPassingParameter",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "StoreTest",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.AimsProject.src.main.java.hust.soict.dsai.test.store.StoreTest",
+            "projectName": "Java_ded981d0",
+            "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.Main",
+            "projectName": "Java_ded981d0",
+            "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "FirstDialog",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.FirstDialog",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "HelloNameDialog",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.HelloNameDialog",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.HelloWorld",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "ShowTwoNumbers",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.ShowTwoNumbers",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai225",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai225",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai226",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai226",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai61",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai61",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai62",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai62",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai63",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai63",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai64",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai64",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai65",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai65",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "bai66",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.lab01.bai66",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "ConcatenationInLoops",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.src.main.java.hust.soict.dsai.garbage.ConcatenationInLoops",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "GarbageCreator",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.src.main.java.hust.soict.dsai.garbage.GarbageCreator",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "NoGarbage",
+            "request": "launch",
+            "mainClass": "first_project_java.src.lab03.OtherProjects.src.main.java.hust.soict.dsai.garbage.NoGarbage",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "aims",
+            "request": "launch",
+            "mainClass": "lab05.Aimsproject.hust.soict.hedspi.aims.aims",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "Media",
+            "request": "launch",
+            "mainClass": "lab05.Aimsproject.hust.soict.hedspi.aims.media.Media",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "lab05.Aimsproject.hust.soict.hedspi.aims.screen.StoreScreen",
+            "projectName": "Java_ded981d0",
+            "vmArgs": "--module-path lib --add-modules javafx.controls,javafx.fxml,javafx.swing",
+             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "AWTAccumulator",
+            "request": "launch",
+            "mainClass": "lab05.GUIProject.hust.soict.hedspi.swing.AWTAccumulator",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "NumberGrid",
+            "request": "launch",
+            "mainClass": "lab05.GUIProject.hust.soict.hedspi.swing.NumberGrid",
+            "projectName": "Java_ded981d0"
+        },
+        {
+            "type": "java",
+            "name": "SwingAccumulator",
+            "request": "launch",
+            "mainClass": "lab05.GUIProject.hust.soict.hedspi.swing.SwingAccumulator",
+            "projectName": "Java_ded981d0"
+        }
+    ]
+}
